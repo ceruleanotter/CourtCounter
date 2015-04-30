@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -38,6 +40,25 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void teamOneScores1(View v) {
+        displayScoreTeam1(1);
+    }
+
+    public void teamOneScores2(View v) {
+        displayScoreTeam1(2);
+    }
+
+    public void teamOneScores3(View v) {
+        displayScoreTeam1(3);
+    }
+
+    public void displayScoreTeam1(int score) {
+        TextView scoreView = (TextView)findViewById(R.id.score_1);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    
 
 
 }
