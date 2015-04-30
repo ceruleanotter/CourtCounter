@@ -73,9 +73,9 @@ public class MainActivity extends ActionBarActivity {
 
     public void reset(View v) {
         score1 = 0;
-        //score2 = 0;
-        displayScoreTeam1(0);
-        displayScoreTeam2(0);
+        score2 = 0;
+        displayScoreTeam1(score1);
+        displayScoreTeam2(score2);
     }
 
     public void displayScoreTeam1(int score) {
