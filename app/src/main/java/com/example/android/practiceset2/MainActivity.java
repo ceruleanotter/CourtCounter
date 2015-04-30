@@ -43,47 +43,47 @@ public class MainActivity extends ActionBarActivity {
 
     public void score1One(View v){
         score1+= 1;
-        displayScore1(score1);
+        displayScoreTeam1(score1);
     }
 
     public void score1Two(View v){
         score1+= 2;
-        displayScore1(score1);
+        displayScoreTeam1(score1);
     }
 
     public void score1Three(View v){
         score1+= 3;
-        displayScore1(score1);
+        displayScoreTeam1(score1);
     }
 
     public void score2One(View v){
         score2+= 1;
-        displayScore2(score2);
+        displayScoreTeam2(score2);
     }
 
     public void score2Two(View v){
         score2+= 2;
-        displayScore2(score2);
+        displayScoreTeam2(score2);
     }
 
     public void score2Three(View v){
         score2+= 3;
-        displayScore2(score2);
+        displayScoreTeam2(score2);
     }
 
     public void reset(View v){
         score2 = 0;
         score1 = 0;
-        displayScore2(score2);
-        displayScore1(score1);
+        displayScoreTeam2(score2);
+        displayScoreTeam1(score1);
     }
 
-    public void displayScore1(int score) {
+    public void displayScoreTeam1(int score) {
         TextView scoreView = (TextView)findViewById(R.id.score_1);
         scoreView.setText(String.valueOf(score));
     }
 
-    public void displayScore2(int score) {
+    public void displayScoreTeam2(int score) {
         TextView scoreView = (TextView)findViewById(R.id.score_2);
         scoreView.setText(String.valueOf(score));
     }
