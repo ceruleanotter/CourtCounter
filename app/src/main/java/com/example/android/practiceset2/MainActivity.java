@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+    int score1 = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //noinspection SimpSlifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -47,7 +48,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void teamOneScores3(View v) {
-        displayScoreTeam1(3);
+        score1 = score1 + 3;
+        displayScoreTeam1(score1);
     }
 
     public void displayScoreTeam1(int score) {
