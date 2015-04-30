@@ -40,11 +40,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void teamOneScores1(View v) {
-        displayScoreTeam1(1);
+        score1 = score1 + 1;
+        displayScoreTeam1(score1);
     }
 
     public void teamOneScores2(View v) {
-        displayScoreTeam1(2);
+        score1 = score1 + 2;
+        displayScoreTeam1(score1);
     }
 
     public void teamOneScores3(View v) {
