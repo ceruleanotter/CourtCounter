@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     int score1 = 0;
+    int score2 = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,20 +55,19 @@ public class MainActivity extends ActionBarActivity {
         displayScoreTeam1(score1);
     }
 
-
     public void teamTwoScores1(View v) {
-        score1 = score1 + 1;
-        displayScoreTeam1(score1);
+        score2 = score2 + 1;
+        displayScoreTeam2(score2);
     }
 
     public void teamTwoScores2(View v) {
-        score1 = score1 + 2;
-        displayScoreTeam1(score1);
+        score2 = score2 + 2;
+        displayScoreTeam2(score2);
     }
 
     public void teamTwoScores3(View v) {
-        score1 = score1 + 3;
-        displayScoreTeam1(score1);
+        score2 = score2 + 3;
+        displayScoreTeam2(score2);
     }
 
     public void displayScoreTeam1(int score) {
@@ -79,8 +79,4 @@ public class MainActivity extends ActionBarActivity {
         TextView scoreView = (TextView)findViewById(R.id.score_2);
         scoreView.setText(String.valueOf(score));
     }
-
-
-
-
 }
