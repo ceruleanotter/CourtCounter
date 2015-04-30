@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
-
-    int score1 = 0;
-    int score2 = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +55,7 @@ public class MainActivity extends ActionBarActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    
+
 
 
 }
