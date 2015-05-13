@@ -1,5 +1,5 @@
-<!-- android:background="#FF9800"!-->
-
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for the basketball score counter. -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -22,57 +22,52 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Team 1"
-                android:textColor="#8c000000"
+                android:text="Team A"
+                android:textColor="#616161"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/score_1"
+                android:id="@+id/team_a_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:paddingBottom="24dp"
                 android:text="0"
-                android:textColor="#d9000000"
+                android:textColor="#000000"
                 android:textSize="56sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp"
-                android:background="@drawable/custom_button"
-                android:onClick="teamOneScores3"
-
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addThreeForTeamA"
                 android:text="+3 Points" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp"
-                android:background="@drawable/custom_button"
-                android:onClick="teamOneScores2"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addTwoForTeamA"
                 android:text="+2 Points" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp"
-                android:background="@drawable/custom_button"
-                android:onClick="teamOneScores1"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addOneForTeamA"
                 android:text="Free throw" />
         </LinearLayout>
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_marginBottom="174dp"
             android:layout_marginTop="16dp"
             android:background="@android:color/darker_gray" />
 
@@ -88,30 +83,28 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Team 2"
-                android:textColor="#8c000000"
+                android:text="Team B"
+                android:textColor="#616161"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/score_2"
+                android:id="@+id/team_b_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:paddingBottom="24dp"
                 android:text="0"
-                android:textColor="#d9000000"
+                android:textColor="#000000"
                 android:textSize="56sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp"
-                android:background="@drawable/custom_button"
-                android:onClick="teamTwoScores3"
-
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addThreeForTeamB"
                 android:text="+3 Points" />
 
             <Button
@@ -120,8 +113,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="22dp"
                 android:layout_marginRight="22dp"
-                android:background="@drawable/custom_button"
-                android:onClick="teamTwoScores2"
+                android:onClick="addTwoForTeamB"
                 android:text="+2 Points" />
 
             <Button
@@ -130,8 +122,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="22dp"
                 android:layout_marginRight="22dp"
-                android:background="@drawable/custom_button"
-                android:onClick="teamTwoScores1"
+                android:onClick="addOneForTeamB"
                 android:text="Free throw" />
         </LinearLayout>
     </LinearLayout>
@@ -142,10 +133,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/custom_button"
-        android:onClick="reset"
+        android:onClick="resetScore"
         android:text="Reset" />
 
 </RelativeLayout>
-
-

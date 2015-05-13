@@ -1,23 +1,28 @@
 package com.example.android.practiceset2;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * This activity keeps track of the basketball score for 2 teams.
+ */
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends ActionBarActivity {
-    int score1 = 0;
-    int score2 = 0;
+    // Tracks the score for Team A
+    int scoreTeamA = 0;
+
+    // Tracks the score for Team B
+    int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -41,50 +46,77 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void teamOneScores1(View v) {
-        score1 = score1 + 1;
-        displayScoreTeam1(score1);
+    /**
+     * Increase the score for Team A by 1 point.
+     */
+    public void addOneForTeamA(View v) {
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void teamOneScores2(View v) {
-        score1 = score1 + 2;
-        displayScoreTeam1(score1);
+    /**
+     * Increase the score for Team A by 2 points.
+     */
+    public void addTwoForTeamA(View v) {
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void teamOneScores3(View v) {
-        score1 = score1 + 3;
-        displayScoreTeam1(score1);
+    /**
+     * Increase the score for Team A by 3 points.
+     */
+    public void addThreeForTeamA(View v) {
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void teamTwoScores1(View v) {
-        score2 = score2 + 1;
-        displayScoreTeam2(score2);
+    /**
+     * Increase the score for Team B by 1 point.
+     */
+    public void addOneForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
     }
 
-    public void teamTwoScores2(View v) {
-        score2 = score2 + 2;
-        displayScoreTeam2(score2);
+    /**
+     * Increase the score for Team B by 2 points.
+     */
+    public void addTwoForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 2;
+        displayForTeamB(scoreTeamB);
     }
 
-    public void teamTwoScores3(View v) {
-        score2 = score2 + 3;
-        displayScoreTeam2(score2);
+    /**
+     * Increase the score for Team B by 3 points.
+     */
+    public void addThreeForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
     }
 
-    public void reset(View v) {
-        score1 = 0;
-        score2 = 0;
-        displayScoreTeam1(score1);
-        displayScoreTeam2(score2);
+    /**
+     * Resets the score for both teams back to 0.
+     */
+    public void resetScore(View v) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 
-    public void displayScoreTeam1(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.score_1);
+    /**
+     * Displays the given score for Team A.
+     */
+    public void displayForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
-    public void displayScoreTeam2(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.score_2);
+    /**
+     * Displays the given score for Team B.
+     */
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 }
